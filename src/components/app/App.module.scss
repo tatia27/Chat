@@ -1,0 +1,28 @@
+@use "../../styles/mixins" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: var(--shadow-primary);
+}
+
+.input {
+  @include basic-input;
+}
+
+.button {
+  @include basic-button;
+
+  &:hover {
+    background-color: var(--color-button-hover);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}

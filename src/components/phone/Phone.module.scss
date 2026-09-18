@@ -1,0 +1,23 @@
+@use "../../styles/mixins" as *;
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.input {
+  @include basic-input;
+}
+
+.button {
+  @include basic-button;
+
+  &:hover {
+    background-color: var(--color-button-hover);
+  }
+}

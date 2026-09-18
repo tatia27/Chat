@@ -1,0 +1,21 @@
+.message {
+  max-width: 65%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message.outgoing {
+  align-self: flex-end;
+  background-color: var(--color-message-output);
+  border-top-right-radius: 2;
+  color: #ffffff;
+}
+
+.message.incoming {
+  align-self: flex-start;
+  background-color: var(--color-message-input);
+  border-top-left-radius: 2;
+  color: #000000;
+}

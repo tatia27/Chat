@@ -1,0 +1,9 @@
+.messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: var(--message-background);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,28 @@
+@use "../../../styles/mixins" as *;
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messageInput {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f0f2f5;
+}
+
+.input {
+  @include basic-input;
+  width: 100%;
+}
+
+.button {
+  @include basic-button;
+
+  &:hover {
+    background-color: var(--color-button-hover);
+  }
+}
