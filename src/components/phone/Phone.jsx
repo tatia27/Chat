@@ -5,9 +5,16 @@ export const Phone = ({ phone, setPhone, setChatId, setMessages }) => {
     e.preventDefault();
 
     if (phone) {
-      const cleanPhone = phone.replace(/\D/g, "");
-      setChatId(`${cleanPhone}@c.us`);
-      setMessages([]);
+      let cleanPhone = phone.replace(/\D/g, "");
+
+      if (cleanPhone.startsWith("8")) {
+        cleanPhone = "7" + cleanPhone.slice(1);
+      }
+
+      if (cleanPhone.length >= 11) {
+        setChatId(`${cleanPhone}@c.us`);
+        setMessages([]);
+      }
     }
   };
 
